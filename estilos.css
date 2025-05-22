@@ -1,17 +1,18 @@
+/* GENERAL */
 body {
   background-color: #050618;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
+/* MENU */
 .menu {
   display: flex;
   flex-direction: column;
@@ -20,7 +21,6 @@ body {
   padding: 20px;
   border-bottom: 2px solid #ccc;
   margin-bottom: 40px;
-
 }
 
 .menu .contenido-superior {
@@ -29,7 +29,6 @@ body {
   gap: 30px;
   margin-bottom: 15px;
 }
-
 
 .menu img {
   max-height: 100px;
@@ -61,11 +60,7 @@ body {
   margin: 0;
 }
 
-.icono {
-  width: 24px;              
-  height: auto;
-}
-
+/* GALERÍA */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -89,6 +84,7 @@ body {
   border-color: #37005f;
 }
 
+/* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
@@ -116,8 +112,8 @@ body {
   color: white;
   cursor: pointer;
 }
-  
 
+/* PIE DE PÁGINA */
 .pie { 
   color: white; 
   text-align: center; 
@@ -125,6 +121,7 @@ body {
   font-size: 14px; 
 }
 
+/* CONTENEDOR PRINCIPAL */
 .wrapper {
   flex: 1;
   display: flex;
@@ -135,6 +132,7 @@ main {
   flex: 1;
 }
 
+/* CONTACTO */
 .recuadro-contacto {
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
@@ -147,8 +145,16 @@ main {
 }
 
 .recuadro-contacto p {
-  padding: 5px;
-  margin: 10px auto;
+  display: flex;
+  align-items: center; 
+  gap: 10px;            
+  margin: 10px 0;
+}
+
+.recuadro-contacto .icono {
+  width: 24px;
+  height: auto;
+  flex-shrink: 0;       
 }
 
 .recuadro-contacto a {
@@ -159,12 +165,14 @@ main {
   color: #ff0d00;
 }
 
+/* VIDEO */
 .video-container {
   display: flex;
   justify-content: center;
   margin: 40px 0;
 }
 
+/* SECCIÓN SOBRE */
 .sobre {
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
@@ -190,18 +198,17 @@ main {
   height: auto;
 }
 
+/* KO-FI */
 .Ko-fi {
   font-size: 25px;
-  margin: 20px auto;
-  margin-bottom: 60px;
+  margin: 20px auto 60px auto;
   max-width: 800px;
   text-align: left;
 }
 
-.Ko-fi a{
+.Ko-fi a {
   color: #4b44ac;
   text-decoration: none;
-
 }
 
 .Ko-fi a:hover {
@@ -222,4 +229,65 @@ main {
 .Ko-fi img:hover {
   transform: scale(1.03);
   border-color: #ff0d00;
+}
+
+/* ADAPTABILIDAD A MÓVILES */
+@media (max-width: 768px) {
+  .menu .contenido-superior {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu img {
+    max-height: 80px;
+    width: auto;
+  }
+
+  .menu ul {
+    align-items: center;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .recuadro-contacto {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    font-size: 16px;
+  }
+
+  .recuadro-contacto p {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  .Ko-fi {
+    font-size: 18px;
+    padding: 0 10px;
+    max-width: 95%;
+  }
+
+  .Ko-fi img {
+    width: 100%;
+  }
+
+  .sobre {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  .sobre h2 {
+    font-size: 14px;
+  }
+
+  .pie {
+    font-size: 12px;
+    padding: 15px;
+  }
 }
