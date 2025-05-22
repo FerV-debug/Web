@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="menu">
+      <div class="contenido-superior">
+        <img src="/imagenes/titulo2.png" alt="Título del juego">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <h1>Un juego de fantasía RPG en 2D</h1>
+    </nav>
+
+    <main>
+      <h1>Galería de imágenes</h1>
+
+      <div class="galeria">
+        <img src="/imagenes/Screen1.png" alt="Pueblo" onclick="abrirLightbox(this)">
+        <img src="/imagenes/Screen2.png" alt="Cabaña" onclick="abrirLightbox(this)">
+        <img src="/imagenes/Screen3.png" alt="Cementerio" onclick="abrirLightbox(this)">
+        <img src="/imagenes/Screen4.png" alt="Pueblo" onclick="abrirLightbox(this)">
+      </div>
+
+  
+      <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+        <span class="cerrar">✖</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+      </div>
+    </main>
+  </div>
+
+  <footer class="pie"> 
+    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
+  </footer>
+
+  <script>
+    function abrirLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    }
+
+    function cerrarLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
