@@ -64,12 +64,31 @@
 
         Se han corregido errores, hecho mejoras visuales y de diseño, así como balanceos, actualmente estoy trabajando en la siguiente "gran expansión" allanando el terreno para que todo esté listo y poder traérosla pronto.
     </p>
+    <div class="galeria">
+    <img src="/imagenes/Screen8.png" alt="Menú" onclick="abrirLightbox(this)">
+    </div>
     <a href="https://itch.io/t/4487859/prxima-actualizacin-v018"> Actualización v.0.1.8(Beta)</a>
 </article>
 </div>
 
 <footer class="pie"> 
     <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
-  </footer> 
+  </footer>
+  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+        <span class="cerrar">✖</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+      </div>
+  <script>
+    function abrirLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    }
+
+    function cerrarLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
