@@ -113,7 +113,6 @@ body {
   cursor: pointer;
 }
 
-/* PIE DE PÁGINA */
 .pie { 
   color: white; 
   text-align: center; 
@@ -132,7 +131,6 @@ main {
   flex: 1;
 }
 
-/* CONTACTO */
 .recuadro-contacto {
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
@@ -172,7 +170,6 @@ main {
   margin: 40px 0;
 }
 
-/* SECCIÓN SOBRE */
 .sobre {
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
@@ -198,7 +195,6 @@ main {
   height: auto;
 }
 
-/* KO-FI */
 .Ko-fi {
   font-size: 25px;
   margin: 20px auto 60px auto;
@@ -231,63 +227,62 @@ main {
   border-color: #ff0d00;
 }
 
-/* ADAPTABILIDAD A MÓVILES */
-@media (max-width: 768px) {
-  .menu .contenido-superior {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+article {
+  display: block;
+  background-color: #0e0f2a;
+  border: 2px solid #4b44ac;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(75, 68, 172, 0.3);
+  text-align: left;
+}
 
-  .menu img {
-    max-height: 80px;
-    width: auto;
-  }
 
-  .menu ul {
-    align-items: center;
-  }
+article .header-flex {
+  display: flex;
+  align-items: center;     
+  gap: 15px;              
+  margin-bottom: 20px;
+}
 
-  .galeria {
-    grid-template-columns: 1fr;
-    padding: 10px;
-  }
+article h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
 
-  .recuadro-contacto {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 90%;
-    font-size: 16px;
-  }
+article h3 {
+  color: #ff0d00;
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+}
 
-  .recuadro-contacto p {
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 14px;
-  }
+article p {
+  text-align: left;
+  margin: 0;
+  white-space: pre-line;
+  padding-top: 20px;
+}
 
-  .Ko-fi {
-    font-size: 18px;
-    padding: 0 10px;
-    max-width: 95%;
-  }
+form {
+  margin-bottom: 20px;
+}
 
-  .Ko-fi img {
-    width: 100%;
-  }
+input, textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+}
 
-  .sobre {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 95%;
-  }
+#postsContainer {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
 
-  .sobre h2 {
-    font-size: 14px;
-  }
-
-  .pie {
-    font-size: 12px;
-    padding: 15px;
-  }
+.post {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
 }
