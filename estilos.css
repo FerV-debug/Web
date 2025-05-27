@@ -1,4 +1,3 @@
-/* GENERAL */
 body {
   background-color: #050618;
   color: white;
@@ -12,7 +11,6 @@ body {
   height: 100%;
 }
 
-/* MENU */
 .menu {
   display: flex;
   flex-direction: column;
@@ -30,23 +28,24 @@ body {
   margin-bottom: 15px;
 }
 
-.menu img {
+.menu .logo img,
+.menu .titulo img {
   max-height: 100px;
+  display: block;
 }
 
 .menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
+  display: flex; /* Mostrar horizontalmente */
+  gap: 20px;
+  justify-content: center;
 }
 
 .menu ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #7300ff;
   font-weight: bold;
 }
 
@@ -57,10 +56,10 @@ body {
 .menu h1 {
   font-size: 25px;
   color: #ffffff;
-  margin: 0;
+  margin-top: 20px;
 }
 
-/* GALERÍA */
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -84,7 +83,6 @@ body {
   border-color: #37005f;
 }
 
-/* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
@@ -265,6 +263,17 @@ article p {
   margin: 0;
   white-space: pre-line;
   padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+article a {
+  color: #4b44ac;
+  text-decoration: none;
+}
+
+article a:hover {
+  color: #ff0d00;
+  text-decoration: none;
 }
 
 form {
