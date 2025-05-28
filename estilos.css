@@ -39,13 +39,14 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Mostrar horizontalmente */
+  display: flex; 
   gap: 20px;
   justify-content: center;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
 }
 
 .menu ul li a {
-  color: #6930e2;
+  color: #fdfdfd;
   font-weight: bold;
 }
 
