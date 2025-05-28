@@ -57,6 +57,7 @@ body {
   font-size: 25px;
   color: #ffffff;
   margin-top: 20px;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
 }
 
 .galeria {
@@ -168,15 +169,30 @@ main {
   margin: 40px 0;
 }
 
+.sobre-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;           
+  margin: 0 auto;
+  padding: 0 20px;       
+  overflow: visible;     
+  box-sizing: border-box;
+}
+
 .sobre {
+  flex: 1 1 0;           
+  max-width: 600px;      
+  min-width: 300px;      
+  box-sizing: border-box;
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
   border-radius: 12px;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 800px;
+  padding: 20px 30px;
   box-shadow: 0 0 20px rgba(75, 68, 172, 0.3);
   text-align: left;
+  overflow: visible;
 }
 
 .sobre h2 {
@@ -248,6 +264,7 @@ article h2 {
   margin: 0;
   padding: 0;
   text-align: left;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
 }
 
 article h3 {
