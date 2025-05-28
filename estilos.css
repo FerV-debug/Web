@@ -307,3 +307,58 @@ input, textarea {
   right: 20px;
   z-index: 9999; /* Asegura que esté encima de otros elementos */
 }
+
+@media (max-width: 768px) {
+  .menu .contenido-superior {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu .logo img,
+  .menu .titulo img {
+    max-height: 70px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 10px;
+  }
+
+  .recuadro-contacto,
+  .sobre,
+  .Ko-fi,
+  article {
+    padding: 20px;
+    margin: 20px 10px;
+    width: 90%;
+  }
+
+  .Ko-fi img {
+    width: 100%;
+  }
+
+  .video-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .menu h1 {
+    font-size: 20px;
+  }
+
+  .recuadro-contacto p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kofi-flotante {
+    bottom: 10px;
+    right: 10px;
+  }
+
+}
