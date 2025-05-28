@@ -114,6 +114,7 @@ body {
 
 .pie { 
   color: white; 
+  display: block;
   text-align: center; 
   padding: 20px; 
   font-size: 14px; 
@@ -299,4 +300,10 @@ input, textarea {
 
 .itch {
   align-items: center;
+}
+.kofi-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Asegura que esté encima de otros elementos */
 }
