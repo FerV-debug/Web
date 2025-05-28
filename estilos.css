@@ -45,8 +45,7 @@ body {
 }
 
 .menu ul li a {
-  text-decoration: none;
-  color: #7300ff;
+  color: #6930e2;
   font-weight: bold;
 }
 
@@ -60,7 +59,6 @@ body {
   margin-top: 20px;
 }
 
-
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -68,6 +66,7 @@ body {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .galeria img {
@@ -77,11 +76,12 @@ body {
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  cursor: pointer; 
 }
 
 .galeria img:hover {
   transform: scale(1.03);
-  border-color: #37005f;
+  border-color: #ff0d00;
 }
 
 .lightbox {
@@ -120,7 +120,6 @@ body {
   font-size: 14px; 
 }
 
-/* CONTENEDOR PRINCIPAL */
 .wrapper {
   flex: 1;
   display: flex;
@@ -163,7 +162,6 @@ main {
   color: #ff0d00;
 }
 
-/* VIDEO */
 .video-container {
   display: flex;
   justify-content: center;
@@ -239,7 +237,6 @@ article {
   text-align: left;
 }
 
-
 article .header-flex {
   display: flex;
   align-items: center;     
@@ -305,8 +302,111 @@ input, textarea {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999; /* Asegura que esté encima de otros elementos */
+  z-index: 9999; 
 }
+
+.gallery-wrapper {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 20px 40px 0 40px; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 250px;
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.1); 
+  border: 2px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 16px; 
+  backdrop-filter: blur(5px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;   
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #ff0d00; 
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+.comision-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff0400;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;        
+  font-size: 18px;           
+  border-radius: 8px;        
+  font-weight: 700;          
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+  cursor: pointer;           
+}
+
+.comision-button:hover {
+  background-color: #ff0d00;
+  transform: scale(1.1);    
+}
+
+.comision-center {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.comision-center p {
+  text-align: left;
+padding: 12px 24px;        
+font-size: 25px; 
+
+}
+
 
 @media (max-width: 768px) {
   .menu .contenido-superior {

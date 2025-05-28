@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Children of Anima</title>
+  <link rel="stylesheet" href="estilos.css"> 
+</head>
+<body>
+<header>  
+  <div class="wrapper">
+    <main>
+      <nav class="menu">
+
+        <div class="contenido-superior">
+          <div class="logo">
+            <img src="imagenes/ico2.png" alt="Logo" />
+          </div>
+          <div class="titulo">
+            <img src="imagenes/titulo.png" alt="Título del juego" />
+          </div>
+        </div>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="blog.html">Diario</a></li>
+          <li><a href="comisiones.html">Comisiones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <h1>Un juego de fantasía RPG en 2D</h1>
+
+      </nav>
+    </main>
+  </div>
+</header>
+
+<h1>¡Ten tu própio personaje en el juego!</h1>
+<div class="gallery-wrapper">
+  <button class="scroll-btn left">‹</button>
+  <div class="gallery" id="carousel">
+    <div class="card">
+      <img src="imagenes/comision1.gif" alt="Comisión 1">
+    </div>
+    <div class="card">
+      <img src="imagenes/comision2.gif" alt="Comisión 2">
+    </div>
+    <div class="card">
+      <img src="imagenes/comision3.gif" alt="Comisión 3">
+    </div>
+    <div class="card">
+      <img src="imagenes/comision4.gif" alt="Comisión 4">
+    </div>
+    <div class="card">
+      <img src="imagenes/comision5.gif" alt="Comisión 5">
+    </div>
+  </div>
+  <button class="scroll-btn right">›</button>
+</div>
+
+<div class="comision-center">
+  <a href="https://ko-fi.com/imvermilion/commissions" target="_blank" class="comision-button">
+    ¡Pide tu personaje!
+  </a>
+  <p>Para ayudar al desarrollo del juego tienes la oportunidad de encargarme un personaje, ya sea inspirado en ti o en una idea tuya. El personaje tendrá el nombre y aspecto que desees
+    y formará parte del juego, aunque la importancia que quieras que tenga en el juego y su historia depende de tí al elegir la comisión.
+    
+    Esto me ayuda a seguir adelante con el desarrollo e invertir lo ganado en mejorar el juego y la experiéncia de los usuarios.
+</p>
+</div>
+
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const btnLeft = document.querySelector('.scroll-btn.left');
+  const btnRight = document.querySelector('.scroll-btn.right');
+
+  btnLeft.addEventListener('click', () => {
+    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  btnRight.addEventListener('click', () => {
+    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
+</main>
+  <footer class="pie"> 
+    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
+  </footer> 
+  <div class="kofi-flotante">
+  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+  <script type='text/javascript'>
+    kofiwidget2.init('Apóyame en Ko-fi', '#ff1a00', 'X8X13HI4V');
+    kofiwidget2.draw();
+  </script>
+</div>
+
+</body>
+</html>
