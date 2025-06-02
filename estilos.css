@@ -1,9 +1,9 @@
 body {
   background-color: #050618;
   background: linear-gradient(to right, #050618, #161731);
-  background-size: cover;        /* para cubrir todo */
-  background-repeat: no-repeat;  /* sin repetición */
-  background-attachment: fixed;  /* para que no se mueva al hacer scroll */
+  background-size: cover;        
+  background-repeat: no-repeat;  
+  background-attachment: fixed;  
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -13,11 +13,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
-  overflow-x: hidden;            /* evita scroll horizontal inesperado */
+  overflow-x: hidden;            
 }
 
 html, body {
-  overflow-x: hidden;  /* Evita scroll horizontal */
+  overflow-x: hidden;  
 }
 
 .menu {
@@ -26,7 +26,8 @@ html, body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #4b44ac;
+  box-shadow: 0 0 20px #4e47b04d;
   margin-bottom: 40px;
 }
 
@@ -63,7 +64,7 @@ html, body {
   text-decoration: none;
   padding: 10px 16px;
   border: 2px solid #4b44ac;
-  border-radius: 50px;         /* Borde redondeado tipo botón */
+  border-radius: 50px;         
   transition: all 0.3s ease;
   display: inline-block;
   text-align: center;
