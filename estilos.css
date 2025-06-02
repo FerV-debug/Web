@@ -426,27 +426,33 @@ font-size: 25px;
 }
 
 
+/* Responsive general para pantallas hasta 768px */
 @media (max-width: 768px) {
+  /* Menu y su contenido superior en columna para no apretar */
   .menu .contenido-superior {
     flex-direction: column;
     gap: 15px;
   }
 
+  /* Menú principal vertical, con menos espacio entre links */
   .menu ul {
     flex-direction: column;
     gap: 10px;
   }
 
+  /* Logos más pequeños para adaptarse a la pantalla */
   .menu .logo img,
   .menu .titulo img {
     max-height: 70px;
   }
 
+  /* Galería con columnas adaptables más pequeñas */
   .galeria {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     padding: 10px;
   }
 
+  /* Contacto, sobre, Ko-fi y artículos con ancho adaptable */
   .recuadro-contacto,
   .sobre,
   .Ko-fi,
@@ -454,29 +460,61 @@ font-size: 25px;
     padding: 20px;
     margin: 20px 10px;
     width: 90%;
+    max-width: none; /* para que ocupe bien el espacio disponible */
   }
 
+  /* Ko-fi imagen ocupa todo el ancho del contenedor */
   .Ko-fi img {
     width: 100%;
   }
 
+  /* Contenedor del video en columna para móviles */
   .video-container {
     flex-direction: column;
     padding: 0 10px;
   }
 
+  /* Título h1 un poco más pequeño en pantallas chicas */
   .menu h1 {
     font-size: 20px;
   }
 
+  /* Ajuste para que el texto en contacto se vea bien alineado */
   .recuadro-contacto p {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Botón flotante más pequeño y menos lejos de los bordes */
   .kofi-flotante {
     bottom: 10px;
     right: 10px;
   }
+}
 
+/* Scroll horizontal para la galería de tarjetas (gallery) */
+/* Ya lo tienes bien, solo asegurar que no aparezca scrollbar visible */
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 20px 40px 0 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ajustar botones scroll para que no tapen el contenido en móviles */
+@media (max-width: 600px) {
+  .scroll-btn.left {
+    left: 5px;
+  }
+
+  .scroll-btn.right {
+    right: 5px;
+  }
 }
