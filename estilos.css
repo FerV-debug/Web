@@ -1,6 +1,9 @@
 body {
   background-color: #050618;
   background: linear-gradient(to right, #050618, #161731);
+  background-size: cover;        /* para cubrir todo */
+  background-repeat: no-repeat;  /* sin repetición */
+  background-attachment: fixed;  /* para que no se mueva al hacer scroll */
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -10,6 +13,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
+  overflow-x: hidden;            /* evita scroll horizontal inesperado */
+}
+
+html, body {
+  overflow-x: hidden;  /* Evita scroll horizontal */
 }
 
 .menu {
@@ -68,7 +76,6 @@ body {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .galeria img {
@@ -132,6 +139,33 @@ main {
   flex: 1;
 }
 
+/* Contenedor y tarjeta sobre con centrado y control de ancho */
+.sobre-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;   /* permite que se ajusten en pantallas pequeñas */
+  width: 100%;
+  max-width: 1200px; /* limita ancho máximo */
+  margin: 0 auto;    /* centra horizontal */
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.sobre {
+  flex: 1 1 300px;
+  max-width: 600px;
+  box-sizing: border-box;
+  background-color: #0e0f2a;
+  border: 2px solid #4b44ac;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 0 20px rgba(75, 68, 172, 0.3);
+  text-align: left;
+  overflow: visible;
+}
+
 .recuadro-contacto {
   background-color: #0e0f2a;
   border: 2px solid #4b44ac;
@@ -168,46 +202,6 @@ main {
   display: flex;
   justify-content: center;
   margin: 40px 0;
-}
-
-.sobre-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: 100%;           
-  margin: 0 auto;
-  padding: 0 20px;       
-  overflow: visible;     
-  box-sizing: border-box;
-}
-
-.sobre {
-  flex: 1 1 0;           
-  max-width: 600px;      
-  min-width: 300px;      
-  box-sizing: border-box;
-  background-color: #0e0f2a;
-  border: 2px solid #4b44ac;
-  border-radius: 12px;
-  padding: 20px 30px;
-  box-shadow: 0 0 20px rgba(75, 68, 172, 0.3);
-  text-align: left;
-  overflow: visible;
-}
-
-.sobre h2 {
-  font-size: 15px;
-  margin: 20px;
-  letter-spacing: 1.5px;
-}
-
-.sobre img {
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 100%;
-  height: auto;
 }
 
 .Ko-fi {
@@ -316,6 +310,7 @@ input, textarea {
 .itch {
   align-items: center;
 }
+
 .kofi-flotante {
   position: fixed;
   bottom: 20px;
@@ -391,6 +386,7 @@ input, textarea {
 .scroll-btn.right {
   right: 0;
 }
+
 .comision-button {
   display: inline-flex;
   align-items: center;
@@ -402,119 +398,50 @@ input, textarea {
   border-radius: 8px;        
   font-weight: 700;          
   font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: fit-content;
-  cursor: pointer;           
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  margin-bottom: 40px;
 }
 
 .comision-button:hover {
-  background-color: #ff0d00;
-  transform: scale(1.1);    
+  background-color: #b40300;
 }
 
-.comision-center {
-  text-align: center;
-  margin: 30px auto;
+.comision-button .icon {
+  margin-left: 10px;
+  font-size: 24px;
 }
 
-.comision-center p {
-  text-align: left;
-padding: 12px 24px;        
-font-size: 25px; 
-
-}
-
-
-/* Responsive general para pantallas hasta 768px */
 @media (max-width: 768px) {
-  /* Menu y su contenido superior en columna para no apretar */
-  .menu .contenido-superior {
-    flex-direction: column;
-    gap: 15px;
+  .sobre-container {
+    padding: 0 10px;  /* menos padding en móviles */
   }
 
-  /* Menú principal vertical, con menos espacio entre links */
-  .menu ul {
+  .sobre {
+    padding: 15px 20px;
+    max-width: 100%;  /* que ocupe todo el ancho disponible */
+  }
+
+  .menu .contenido-superior {
     flex-direction: column;
     gap: 10px;
   }
 
-  /* Logos más pequeños para adaptarse a la pantalla */
-  .menu .logo img,
-  .menu .titulo img {
-    max-height: 70px;
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  /* Galería con columnas adaptables más pequeñas */
-  .galeria {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    padding: 10px;
-  }
-
-  /* Contacto, sobre, Ko-fi y artículos con ancho adaptable */
-  .recuadro-contacto,
-  .sobre,
-  .Ko-fi,
-  article {
-    padding: 20px;
-    margin: 20px 10px;
-    width: 90%;
-    max-width: none; /* para que ocupe bien el espacio disponible */
-  }
-
-  /* Ko-fi imagen ocupa todo el ancho del contenedor */
-  .Ko-fi img {
+  .gallery-wrapper {
     width: 100%;
+    padding: 0;
   }
 
-  /* Contenedor del video en columna para móviles */
-  .video-container {
-    flex-direction: column;
-    padding: 0 10px;
+  .gallery {
+    padding: 0 10px 0 10px;
   }
 
-  /* Título h1 un poco más pequeño en pantallas chicas */
-  .menu h1 {
-    font-size: 20px;
-  }
-
-  /* Ajuste para que el texto en contacto se vea bien alineado */
-  .recuadro-contacto p {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Botón flotante más pequeño y menos lejos de los bordes */
-  .kofi-flotante {
-    bottom: 10px;
-    right: 10px;
-  }
-}
-
-/* Scroll horizontal para la galería de tarjetas (gallery) */
-/* Ya lo tienes bien, solo asegurar que no aparezca scrollbar visible */
-.gallery {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 16px;
-  padding: 20px 40px 0 40px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.gallery::-webkit-scrollbar {
-  display: none;
-}
-
-/* Ajustar botones scroll para que no tapen el contenido en móviles */
-@media (max-width: 600px) {
-  .scroll-btn.left {
-    left: 5px;
-  }
-
-  .scroll-btn.right {
-    right: 5px;
+  .card {
+    min-width: 200px;
   }
 }
