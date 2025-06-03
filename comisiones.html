@@ -85,6 +85,73 @@
 </div>
 
 
+  <div class="customizer-container">
+  <!-- Personaje -->
+  <div id="character-container">
+    <img id="hair-layer" src="assets/pelo-rojo.png" alt="Pelo">
+    <img id="clothes-layer" src="assets/ropa1.png" alt="Ropa">
+  </div>
+
+  <!-- Opciones -->
+  <div class="options-panel">
+  <div>
+    <label for="hair-selector">Pelo:</label><br>
+    <select id="hair-selector">
+      <option value="pelo-rojo.png">Rojo</option>
+      <option value="pelo-negro.png">Negro</option>
+      <option value="pelo-marron.png">Castaño</option>
+      <option value="pelo-rubio.png">Rubio</option>
+    </select>
+  </div>
+  <div>
+    <label for="clothes-selector">Ropa:</label><br>
+    <select id="clothes-selector">
+      <option value="ropa1.png">Ropa 1</option>
+      <option value="ropa2.png">Ropa 2</option>
+    </select>
+  </div>
+  <!-- Botón para guardar la imagen -->
+  <button id="save-btn" style="margin-top:1rem; padding:0.5rem; font-size:1rem;">Guardar imagen</button>
+</div>
+
+<script>
+  // Cambiar pelo
+  document.getElementById("hair-selector").addEventListener("change", function(e) {
+    document.getElementById("hair-layer").src = "assets/" + e.target.value;
+  });
+
+  // Cambiar ropa
+  document.getElementById("clothes-selector").addEventListener("change", function(e) {
+    document.getElementById("clothes-layer").src = "assets/" + e.target.value;
+  });
+
+  // Guardar imagen como PNG
+  document.getElementById('save-btn').addEventListener('click', () => {
+    const canvas = document.createElement('canvas');
+    const size = 64; // tamaño original de tus sprites
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+
+    const layers = [
+      document.getElementById('hair-layer'),
+      document.getElementById('clothes-layer')
+    ];
+
+    layers.forEach(img => {
+      if (img.complete) {
+        ctx.drawImage(img, 0, 0, size, size);
+      }
+    });
+
+    // Descargar imagen
+    const link = document.createElement('a');
+    link.download = 'personaje.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+</script>
+
 <script>
   const carousel = document.getElementById('carousel');
   const btnLeft = document.querySelector('.scroll-btn.left');
@@ -110,5 +177,9 @@
   </script>
 </div>
 
+
+
+
+</body>
 </body>
 </html>
