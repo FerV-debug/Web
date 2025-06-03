@@ -472,4 +472,9 @@ input, textarea {
   .card {
     min-width: 200px;
   }
+
+  .recuadro-contacto {
+  padding: 15px 20px;
+    max-width: 90%; 
+}
 }
