@@ -14,9 +14,9 @@
     <div id="transition-flash"></div>
 
     <div class="welcome-container" id="welcome-scene">
-        <!-- Capa exterior para el movimiento Parallax -->
+        
         <div class="welcome-background parallax-layer" data-depth="0.2">
-            <!-- Capa interior para el zoom continuo (Ken Burns) -->
+            
             <div class="zoom-layer" style="background-image: url('/Web/imagenes/cabecera.png');"></div>
         </div>
         
@@ -32,7 +32,7 @@
     </div>
 
 <script>
-    // --- EFECTO PARALLAX CON EL RATÓN ---
+    
     document.addEventListener('mousemove', function(e) {
         const layers = document.querySelectorAll('.parallax-layer');
         const centerX = window.innerWidth / 2;
@@ -48,7 +48,7 @@
     });
 
 
-    // --- SCRIPT PARA LA TRANSICIÓN DE ENTRADA ---
+    
     const enterButton = document.getElementById('enter-world-btn');
     const welcomeScene = document.getElementById('welcome-scene');
     const flashEffect = document.getElementById('transition-flash');

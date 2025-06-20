@@ -14,17 +14,17 @@
 <div class="site-container">
     <header class="site-header">
   <nav class="menu">
-    <!-- 1. Logo a la izquierda -->
+    
     <a href="index.html" class="logo-link">
       <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
     </a>
 
-    <!-- 2. Título del juego en el centro -->
+    
     <div class="menu-title-container">
         <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
     </div>
 
-    <!-- 3. Links de navegación a la derecha -->
+    
     <ul>
       <li><a href="home.html">Inicio</a></li>
       <li><a href="galeria.html">Galería</a></li>
@@ -38,11 +38,11 @@
     <main class="content">
       <h2 class="section-title">¡Ten tu propio personaje en el juego!</h2>
 
-      <!-- Carrusel de GIFs restaurado -->
+      
       <div class="gallery-wrapper">
         <button class="scroll-btn left">‹</button>
         <div class="commission-gallery" id="carousel">
-            <!-- Cada 'card' es un elemento del carrusel -->
+            
             <div class="card">
               <img src="/imagenes/comision1.gif" alt="Comisión 1" onerror="this.src='imagenes/comision1.gif'; this.onerror=null;">
             </div>
@@ -84,18 +84,18 @@
         <a href="https://ko-fi.com/imvermilion/commissions" target="_blank" class="enter-button" style="margin-top: 20px; font-size: 1.2rem;">¡Pide tu personaje!</a>
       </div>
       
-      <!-- Personalizador de Personajes restaurado -->
+      
       <h2 class="section-title">Crea tu Personaje</h2>
       <div class="customizer-container card-style">
-          <!-- Contenedor del personaje -->
+         
           <div id="character-container">
-            <!-- Asegúrate que la ruta a la carpeta 'assets' es correcta -->
+            
             <img id="base-layer" src="/assets/base.png" alt="Base" onerror="this.src='assets/base.png'; this.onerror=null;">
             <img id="hair-layer" src="/assets/pelo-rojo.png" alt="Pelo" onerror="this.src='assets/pelo-rojo.png'; this.onerror=null;">
             <img id="clothes-layer" src="/assets/ropa1.png" alt="Ropa" onerror="this.src='assets/ropa1.png'; this.onerror=null;">
           </div>
         
-          <!-- Panel de opciones -->
+          
           <div class="options-panel">
             <div>
               <label for="hair-selector">Pelo:</label>
@@ -113,7 +113,7 @@
                 <option value="ropa2.png">Mago</option>
               </select>
             </div>
-            <!-- Botón para guardar la imagen -->
+            
             <button id="save-btn" class="enter-button" style="font-size: 1rem; padding: 10px 20px;">Guardar Imagen</button>
           </div>
       </div>
@@ -125,14 +125,14 @@
     </footer>
 </div>
 
-<!-- Scripts restaurados para carrusel y personalizador -->
+
 <script>
-  // Script para el carrusel
+  
   const carousel = document.getElementById('carousel');
   if (carousel) {
     const btnLeft = document.querySelector('.scroll-btn.left');
     const btnRight = document.querySelector('.scroll-btn.right');
-    const cardWidth = 250; // Ancho aproximado de cada tarjeta + gap
+    const cardWidth = 250; 
 
     btnLeft.addEventListener('click', () => {
       carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
@@ -143,13 +143,13 @@
     });
   }
 
-  // Script para el personalizador de personajes
+  
   const hairSelector = document.getElementById("hair-selector");
   const clothesSelector = document.getElementById("clothes-selector");
   const saveBtn = document.getElementById('save-btn');
 
   if (hairSelector && clothesSelector && saveBtn) {
-    const assetPath = 'assets/'; // Asegúrate que esta es la ruta correcta
+    const assetPath = 'assets/'; 
     const hairLayer = document.getElementById("hair-layer");
     const clothesLayer = document.getElementById("clothes-layer");
     const baseLayer = document.getElementById("base-layer");
@@ -165,16 +165,16 @@
 
     saveBtn.addEventListener('click', () => {
         const canvas = document.createElement('canvas');
-        const size = 64; // Tamaño original de tus sprites
+        const size = 64; 
         canvas.width = size;
         canvas.height = size;
         const ctx = canvas.getContext('2d');
-        ctx.imageSmoothingEnabled = false; // Crucial para pixel art
+        ctx.imageSmoothingEnabled = false; 
 
-        // Lista de imágenes a dibujar en orden.
+        
         const layersToDraw = [baseLayer, clothesLayer, hairLayer];
         
-        // Cargar todas las imágenes antes de dibujar
+        
         const promises = layersToDraw.map(imgElement => {
             return new Promise((resolve, reject) => {
                 if (imgElement.complete) {
@@ -191,12 +191,12 @@
 
         Promise.all(promises)
             .then(images => {
-                // Limpiar el canvas y dibujar
+                
                 ctx.clearRect(0, 0, size, size);
                 images.forEach(img => {
                     ctx.drawImage(img, 0, 0, size, size);
                 });
-                // Descargar
+                
                 const link = document.createElement('a');
                 link.download = 'mi_personaje.png';
                 link.href = canvas.toDataURL('image/png');

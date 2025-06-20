@@ -1,7 +1,7 @@
-/* --- Fuentes de Google Fonts --- */
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap');
 
-/* --- Variables de Color y Estilos Globales --- */
+
 :root {
     --bg-dark-blue: #050618;
     --bg-medium-blue: #161731;
@@ -15,11 +15,11 @@
     --glow-shadow: 0 0 15px #2e2a6580;
 }
 
-/* --- Animaciones (Keyframes) --- */
-/* REINTRODUCIDA: Animación de zoom lento */
+
+
 @keyframes kenburns-zoom {
     0% { transform: scale(1); }
-    100% { transform: scale(1.15); } /* Aumentado un poco para que sea más notable */
+    100% { transform: scale(1.15); } 
 }
 
 @keyframes title-float {
@@ -34,7 +34,7 @@
     100% { opacity: 0; }
 }
 
-/* --- Estilos Base --- */
+
 html { scroll-behavior: smooth; }
 body {
     background-color: var(--bg-dark-blue);
@@ -49,7 +49,7 @@ body {
     overflow-x: hidden;
 }
 
-/* === ESTILOS PORTADA (con Parallax y Zoom) === */
+
 body.landing { overflow: hidden; }
 .welcome-container {
     position: relative;
@@ -80,7 +80,7 @@ body.landing { overflow: hidden; }
     z-index: 1;
 }
 
-/* NUEVO: Capa interior para el zoom */
+
 .zoom-layer {
     width: 100%;
     height: 100%;
@@ -158,10 +158,10 @@ body.landing { overflow: hidden; }
 #transition-flash.flash {
     animation: flash-bang 1.2s ease-out;
 }
-/* === FIN DE ESTILOS DE PORTADA === */
 
 
-/* === ESTILOS DEL SITIO PRINCIPAL === */
+
+
 .site-container { display: flex; flex-direction: column; min-height: 100vh; }
 main.content { flex: 1; padding: 0 20px 40px 20px; max-width: 1200px; width: 100%; margin: 0 auto; box-sizing: border-box; }
 h1, h2, h3 { font-family: var(--font-title); color: white; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); }
@@ -171,21 +171,21 @@ h3 { font-size: 1.2rem; color: var(--text-dark); }
 article h2 { font-size: 1.8rem; }
 article h3 { font-size: 1rem; color: var(--accent-red); font-family: var(--font-body); font-weight: bold;}
 
-/* === HEADER Y MENÚ (ACTUALIZADO) === */
+
 .site-header { width: 100%; padding: 10px 0; border-bottom: 2px solid var(--border-purple); box-shadow: var(--glow-shadow); background-color: rgba(5, 6, 24, 0.8); backdrop-filter: blur(5px); position: sticky; top: 0; z-index: 1000; }
 .menu { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .logo-link { flex-shrink: 0; }
 .logo-img { height: 60px; width: auto; image-rendering: pixelated; transition: transform 0.3s ease; }
 .logo-link:hover .logo-img { transform: scale(1.1); }
 
-/* Contenedor del título en el menú */
+
 .menu-title-container {
     flex-grow: 1;
     text-align: center;
     padding: 0 20px;
 }
 .menu-title-image {
-    height: 55px; /* Ajusta la altura según necesites */
+    height: 55px; 
     width: auto;
     max-width: 100%;
 }
@@ -194,7 +194,7 @@ article h3 { font-size: 1rem; color: var(--accent-red); font-family: var(--font-
 .menu ul li a { color: var(--text-light); font-weight: bold; text-decoration: none; padding: 10px 20px; border: 2px solid transparent; border-radius: 50px; transition: all 0.3s ease; font-size: 1rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
 .menu ul li a:hover, .menu ul li a.active { color: var(--accent-red); border-color: var(--accent-red); background-color: rgba(255, 13, 0, 0.1); }
 
-/* Resto de estilos... (sin cambios) */
+
 .main-title-container { margin-bottom: 40px; }
 .main-title-container .main-title-image { max-width: 90%; width: 550px; height: auto; margin-bottom: -10px; }
 .main-title-container h1 { font-size: 1.4rem; color: var(--text-dark); margin-top: 0; font-family: var(--font-body); }
