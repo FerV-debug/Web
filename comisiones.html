@@ -3,183 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Children of Anima</title>
-  <link rel="stylesheet" href="estilos.css"> 
+  <title>Comisiones - Children of Anima</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>  
-  <div class="wrapper">
-    <main>
-      <nav class="menu">
 
-        <div class="contenido-superior">
-          <div class="logo">
-            <img src="imagenes/ico2.png" alt="Logo" />
-          </div>
-          <div class="titulo">
-            <img src="imagenes/titulo1.png" alt="Título del juego" />
-          </div>
-        </div>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="blog.html">Diario</a></li>
-          <li><a href="comisiones.html">Comisiones</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+<div class="site-container">
+    <header class="site-header">
+  <nav class="menu">
+    <!-- 1. Logo a la izquierda -->
+    <a href="index.html" class="logo-link">
+      <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
+    </a>
 
-        <h1>Un juego de fantasía RPG en 2D</h1>
+    <!-- 2. Título del juego en el centro -->
+    <div class="menu-title-container">
+        <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
+    </div>
 
-      </nav>
-    </main>
-  </div>
+    <!-- 3. Links de navegación a la derecha -->
+    <ul>
+      <li><a href="home.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="blog.html">Diario</a></li>
+      <li><a href="comisiones.html">Comisiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
-<h1>¡Ten tu própio personaje en el juego!</h1>
-<div class="gallery-wrapper">
-  <button class="scroll-btn left">‹</button>
-  <div class="gallery" id="carousel">
-    <div class="card">
-      <img src="imagenes/comision1.gif" alt="Comisión 1">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision2.gif" alt="Comisión 2">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision3.gif" alt="Comisión 3">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision4.gif" alt="Comisión 4">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision5.gif" alt="Comisión 5">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision6.gif" alt="Comisión 5">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision7.gif" alt="Comisión 5">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision8.gif" alt="Comisión 5">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision9.gif" alt="Comisión 5">
-    </div>
-    <div class="card">
-      <img src="imagenes/comision10.gif" alt="Comisión 5">
-    </div>
-  </div>
-  <button class="scroll-btn right">›</button>
+    <main class="content">
+      <h2 class="section-title">¡Ten tu propio personaje en el juego!</h2>
+
+      <!-- Carrusel de GIFs restaurado -->
+      <div class="gallery-wrapper">
+        <button class="scroll-btn left">‹</button>
+        <div class="commission-gallery" id="carousel">
+            <!-- Cada 'card' es un elemento del carrusel -->
+            <div class="card">
+              <img src="/imagenes/comision1.gif" alt="Comisión 1" onerror="this.src='imagenes/comision1.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision2.gif" alt="Comisión 2" onerror="this.src='imagenes/comision2.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision3.gif" alt="Comisión 3" onerror="this.src='imagenes/comision3.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision4.gif" alt="Comisión 4" onerror="this.src='imagenes/comision4.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision5.gif" alt="Comisión 5" onerror="this.src='imagenes/comision5.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision6.gif" alt="Comisión 6" onerror="this.src='imagenes/comision6.gif'; this.onerror=null;">
+            </div>
+            <div class="card">
+              <img src="/imagenes/comision7.gif" alt="Comisión 7" onerror="this.src='imagenes/comision7.gif'; this.onerror=null;">
+            </div>
+             <div class="card">
+              <img src="/imagenes/comision8.gif" alt="Comisión 8" onerror="this.src='imagenes/comision8.gif'; this.onerror=null;">
+            </div>
+             <div class="card">
+              <img src="/imagenes/comision9.gif" alt="Comisión 9" onerror="this.src='imagenes/comision9.gif'; this.onerror=null;">
+            </div>
+             <div class="card">
+              <img src="/imagenes/comision10.gif" alt="Comisión 10" onerror="this.src='imagenes/comision10.gif'; this.onerror=null;">
+            </div>
+        </div>
+        <button class="scroll-btn right">›</button>
+      </div>
+
+
+      <div class="card-style" style="max-width: 800px; margin: 40px auto; text-align: center;">
+        <p>Para ayudar al desarrollo del juego tienes la oportunidad de encargarme un personaje, ya sea inspirado en ti o en una idea tuya. El personaje tendrá el nombre y aspecto que desees y formará parte del juego, aunque la importancia que quieras que tenga en el juego y su historia depende de ti al elegir la comisión.</p>
+        <p>Esto me ayuda a seguir adelante con el desarrollo e invertir lo ganado en mejorar el juego y la experiencia de los usuarios.</p>
+        <a href="https://ko-fi.com/imvermilion/commissions" target="_blank" class="enter-button" style="margin-top: 20px; font-size: 1.2rem;">¡Pide tu personaje!</a>
+      </div>
+      
+      <!-- Personalizador de Personajes restaurado -->
+      <h2 class="section-title">Crea tu Personaje</h2>
+      <div class="customizer-container card-style">
+          <!-- Contenedor del personaje -->
+          <div id="character-container">
+            <!-- Asegúrate que la ruta a la carpeta 'assets' es correcta -->
+            <img id="base-layer" src="/assets/base.png" alt="Base" onerror="this.src='assets/base.png'; this.onerror=null;">
+            <img id="hair-layer" src="/assets/pelo-rojo.png" alt="Pelo" onerror="this.src='assets/pelo-rojo.png'; this.onerror=null;">
+            <img id="clothes-layer" src="/assets/ropa1.png" alt="Ropa" onerror="this.src='assets/ropa1.png'; this.onerror=null;">
+          </div>
+        
+          <!-- Panel de opciones -->
+          <div class="options-panel">
+            <div>
+              <label for="hair-selector">Pelo:</label>
+              <select id="hair-selector" class="select-custom">
+                <option value="pelo-rojo.png">Rojo</option>
+                <option value="pelo-negro.png">Negro</option>
+                <option value="pelo-marron.png">Castaño</option>
+                <option value="pelo-rubio.png">Rubio</option>
+              </select>
+            </div>
+            <div>
+              <label for="clothes-selector">Ropa:</label>
+              <select id="clothes-selector" class="select-custom">
+                <option value="ropa1.png">Aventurero</option>
+                <option value="ropa2.png">Mago</option>
+              </select>
+            </div>
+            <!-- Botón para guardar la imagen -->
+            <button id="save-btn" class="enter-button" style="font-size: 1rem; padding: 10px 20px;">Guardar Imagen</button>
+          </div>
+      </div>
+
+    </main>
+
+    <footer class="pie">
+      <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p>
+    </footer>
 </div>
 
-<div class="comision-center">
-  <a href="https://ko-fi.com/imvermilion/commissions" target="_blank" class="comision-button">
-    ¡Pide tu personaje!
-  </a>
-  <p>Para ayudar al desarrollo del juego tienes la oportunidad de encargarme un personaje, ya sea inspirado en ti o en una idea tuya. El personaje tendrá el nombre y aspecto que desees
-    y formará parte del juego, aunque la importancia que quieras que tenga en el juego y su historia depende de tí al elegir la comisión.
-    
-    Esto me ayuda a seguir adelante con el desarrollo e invertir lo ganado en mejorar el juego y la experiéncia de los usuarios.
-</p>
-</div>
-
-
-  <div class="customizer-container">
-  <!-- Personaje -->
-  <div id="character-container">
-    <img id="hair-layer" src="assets/pelo-rojo.png" alt="Pelo">
-    <img id="clothes-layer" src="assets/ropa1.png" alt="Ropa">
-  </div>
-
-  <!-- Opciones -->
-  <div class="options-panel">
-  <div>
-    <label for="hair-selector">Pelo:</label><br>
-    <select id="hair-selector">
-      <option value="pelo-rojo.png">Rojo</option>
-      <option value="pelo-negro.png">Negro</option>
-      <option value="pelo-marron.png">Castaño</option>
-      <option value="pelo-rubio.png">Rubio</option>
-    </select>
-  </div>
-  <div>
-    <label for="clothes-selector">Ropa:</label><br>
-    <select id="clothes-selector">
-      <option value="ropa1.png">Ropa 1</option>
-      <option value="ropa2.png">Ropa 2</option>
-    </select>
-  </div>
-  <!-- Botón para guardar la imagen -->
-  <button id="save-btn" style="margin-top:1rem; padding:0.5rem; font-size:1rem;">Guardar imagen</button>
-</div>
-
+<!-- Scripts restaurados para carrusel y personalizador -->
 <script>
-  // Cambiar pelo
-  document.getElementById("hair-selector").addEventListener("change", function(e) {
-    document.getElementById("hair-layer").src = "assets/" + e.target.value;
-  });
+  // Script para el carrusel
+  const carousel = document.getElementById('carousel');
+  if (carousel) {
+    const btnLeft = document.querySelector('.scroll-btn.left');
+    const btnRight = document.querySelector('.scroll-btn.right');
+    const cardWidth = 250; // Ancho aproximado de cada tarjeta + gap
 
-  // Cambiar ropa
-  document.getElementById("clothes-selector").addEventListener("change", function(e) {
-    document.getElementById("clothes-layer").src = "assets/" + e.target.value;
-  });
-
-  // Guardar imagen como PNG
-  document.getElementById('save-btn').addEventListener('click', () => {
-    const canvas = document.createElement('canvas');
-    const size = 64; // tamaño original de tus sprites
-    canvas.width = size;
-    canvas.height = size;
-    const ctx = canvas.getContext('2d');
-
-    const layers = [
-      document.getElementById('hair-layer'),
-      document.getElementById('clothes-layer')
-    ];
-
-    layers.forEach(img => {
-      if (img.complete) {
-        ctx.drawImage(img, 0, 0, size, size);
-      }
+    btnLeft.addEventListener('click', () => {
+      carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
     });
 
-    // Descargar imagen
-    const link = document.createElement('a');
-    link.download = 'personaje.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-  });
+    btnRight.addEventListener('click', () => {
+      carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+  // Script para el personalizador de personajes
+  const hairSelector = document.getElementById("hair-selector");
+  const clothesSelector = document.getElementById("clothes-selector");
+  const saveBtn = document.getElementById('save-btn');
+
+  if (hairSelector && clothesSelector && saveBtn) {
+    const assetPath = 'assets/'; // Asegúrate que esta es la ruta correcta
+    const hairLayer = document.getElementById("hair-layer");
+    const clothesLayer = document.getElementById("clothes-layer");
+    const baseLayer = document.getElementById("base-layer");
+
+
+    hairSelector.addEventListener("change", function(e) {
+      hairLayer.src = assetPath + e.target.value;
+    });
+
+    clothesSelector.addEventListener("change", function(e) {
+      clothesLayer.src = assetPath + e.target.value;
+    });
+
+    saveBtn.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        const size = 64; // Tamaño original de tus sprites
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        ctx.imageSmoothingEnabled = false; // Crucial para pixel art
+
+        // Lista de imágenes a dibujar en orden.
+        const layersToDraw = [baseLayer, clothesLayer, hairLayer];
+        
+        // Cargar todas las imágenes antes de dibujar
+        const promises = layersToDraw.map(imgElement => {
+            return new Promise((resolve, reject) => {
+                if (imgElement.complete) {
+                    resolve(imgElement);
+                } else {
+                    const img = new Image();
+                    img.crossOrigin = "Anonymous";
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = imgElement.src;
+                }
+            });
+        });
+
+        Promise.all(promises)
+            .then(images => {
+                // Limpiar el canvas y dibujar
+                ctx.clearRect(0, 0, size, size);
+                images.forEach(img => {
+                    ctx.drawImage(img, 0, 0, size, size);
+                });
+                // Descargar
+                const link = document.createElement('a');
+                link.download = 'mi_personaje.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            })
+            .catch(error => {
+                console.error("Error al cargar las imágenes para el canvas:", error);
+                alert("Hubo un error al generar la imagen. Asegúrate de que los archivos existen.");
+            });
+    });
+  }
 </script>
 
-<script>
-  const carousel = document.getElementById('carousel');
-  const btnLeft = document.querySelector('.scroll-btn.left');
-  const btnRight = document.querySelector('.scroll-btn.right');
-
-  btnLeft.addEventListener('click', () => {
-    carousel.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-
-  btnRight.addEventListener('click', () => {
-    carousel.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-</script>
-</main>
-  <footer class="pie"> 
-    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
-  </footer> 
-  <div class="kofi-flotante">
-  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-  <script type='text/javascript'>
-    kofiwidget2.init('Apóyame en Ko-fi', '#ff1a00', 'X8X13HI4V');
-    kofiwidget2.draw();
-  </script>
-</div>
-
-
-
-
-</body>
 </body>
 </html>

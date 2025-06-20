@@ -3,83 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
+  <title>Contacto - Children of Anima</title>
   <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>  
-  <div class="wrapper">
-    <main>
-      <nav class="menu">
 
-        <div class="contenido-superior">
-          <div class="logo">
-            <img src="imagenes/ico2.png" alt="Logo" />
-          </div>
-          <div class="titulo">
-            <img src="imagenes/titulo1.png" alt="Título del juego" />
-          </div>
-        </div>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="blog.html">Diario</a></li>
-          <li><a href="comisiones.html">Comisiones</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+<div class="site-container">
+    <header class="site-header">
+  <nav class="menu">
+    <!-- 1. Logo a la izquierda -->
+    <a href="index.html" class="logo-link">
+      <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
+    </a>
 
-        <h1>Un juego de fantasía RPG en 2D</h1>
+    <!-- 2. Título del juego en el centro -->
+    <div class="menu-title-container">
+        <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
+    </div>
 
-      </nav>
-    </main>
-  </div>
+    <!-- 3. Links de navegación a la derecha -->
+    <ul>
+      <li><a href="home.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="blog.html">Diario</a></li>
+      <li><a href="comisiones.html">Comisiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
-    <main>
-
-      <div class="Ko-fi">
-        <p>Actualmente estoy desarrollando un videojuego de rol, acción y aventura en 2D ambientado en un mundo de fantasía.
-          Es un proyecto personal ambicioso y que sigue adelante gracias al apoyo de la gente que sigue fielmente el desarrollo,
-          puedes colaborar con el proyecto y como va avanzando y mejorando desde <a href="https://ko-fi.com/imvermilion" target="_blank"> Ko-Fi</a>
-        </p>
-
-        <iframe id='kofiframe' src='https://ko-fi.com/imvermilion/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#050618;' height='712' title='imvermilion'></iframe>
-
+    <main class="content">
+      <h2 class="section-title">Apoya el Proyecto</h2>
+        <div class="card-style" style="max-width: 800px; margin: 20px auto;">
+        <p style="text-align: center;">Actualmente estoy desarrollando este videojuego como un proyecto personal. Es una aventura ambiciosa que sigue adelante gracias al apoyo de la gente. Si te gusta lo que ves, puedes colaborar con el desarrollo y seguir su progreso a través de Ko-Fi.</p>
+        <iframe id='kofiframe' src='https://ko-fi.com/imvermilion/?hidefeed=true&widget=true&embed=true&preview=true' style='border:1px solid var(--border-purple);width:100%;padding:4px;background:var(--bg-panel); border-radius: 8px;' height='712' title='imvermilion'></iframe>
       </div>
 
-      <h1> Redes y contacto</h1>
+      <h2 class="section-title" style="margin-top: 60px;">Redes y Contacto</h2>
       <div class="recuadro-contacto">
         <p>
-          <img src="imagenes/gmail.png" alt="Gmail" class="icono">
+          <img src="https://placehold.co/48x48/000000/000000?text=+" alt="Gmail" class="icono" onerror="this.src='imagenes/gmail.png'; this.onerror=null;">
           Email: <a href="mailto:ejemplo@correo.com">Mi email</a>
         </p>
         <p>
-          <img src="imagenes/youtube.png" alt="YouTube" class="icono">
-          <strong>YouTube:</strong> 
+          <img src="https://placehold.co/48x48/000000/000000?text=+" alt="YouTube" class="icono" onerror="this.src='imagenes/youtube.png'; this.onerror=null;">
+          <strong>YouTube:</strong>
           <a href="https://www.youtube.com/channel/UCk4T6Yotdwj0E74FpG8Q--Q" target="_blank">Vermilion Games</a>
         </p>
         <p>
-          <img src="imagenes/twitter.png" alt="Twitter" class="icono">
-          <strong>Twitter</strong>
-          <a href="twitter.com/Im_Vermilion"target="_blank"> Im_Vermilion</a>
+          <img src="https://placehold.co/48x48/000000/000000?text=+" alt="Twitter" class="icono" onerror="this.src='imagenes/twitter.png'; this.onerror=null;">
+          <strong>Twitter:</strong>
+          <a href="https://twitter.com/Im_Vermilion"target="_blank"> @Im_Vermilion</a>
         </p>
         <p>
-          <img src="imagenes/itch.png" alt="Itch.io" class="icono">
-          <strong>Itch.io:</strong> 
+          <img src="https://placehold.co/48x48/000000/000000?text=+" alt="Itch.io" class="icono" onerror="this.src='imagenes/itch.png'; this.onerror=null;">
+          <strong>Itch.io:</strong>
           <a href="https://vermiliongames.itch.io/children-of-anima" target="_blank">Children of Anima</a>
         </p>
       </div>
     </main>
-  </div>
 
-  <footer class="pie"> 
-    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
-  </footer>
-  <div class="kofi-flotante">
-  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-  <script type='text/javascript'>
-    kofiwidget2.init('Apóyame en Ko-fi', '#ff1a00', 'X8X13HI4V');
-    kofiwidget2.draw();
-  </script>
+    <footer class="pie">
+      <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p>
+    </footer>
+</div>
+
 </body>
 </html>

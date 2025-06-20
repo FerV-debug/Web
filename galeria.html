@@ -3,84 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería</title>
+  <title>Galería - Children of Anima</title>
   <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>  
-  <div class="wrapper">
-    <main>
-      <nav class="menu">
 
-        <div class="contenido-superior">
-          <div class="logo">
-            <img src="imagenes/ico2.png" alt="Logo" />
-          </div>
-          <div class="titulo">
-            <img src="imagenes/titulo1.png" alt="Título del juego" />
-          </div>
-        </div>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="blog.html">Diario</a></li>
-          <li><a href="comisiones.html">Comisiones</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+<div class="site-container">
+    <header class="site-header">
+  <nav class="menu">
+    <!-- 1. Logo a la izquierda -->
+    <a href="index.html" class="logo-link">
+      <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
+    </a>
 
-        <h1>Un juego de fantasía RPG en 2D</h1>
+    <!-- 2. Título del juego en el centro -->
+    <div class="menu-title-container">
+        <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
+    </div>
 
-      </nav>
-    </main>
-  </div>
+    <!-- 3. Links de navegación a la derecha -->
+    <ul>
+      <li><a href="home.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="blog.html">Diario</a></li>
+      <li><a href="comisiones.html">Comisiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
+    <main class="content">
+        <h2 class="section-title">Galería de Imágenes</h2>
+        <div class="galeria">
+            
+            <img src="/imagenes/Screen1.png" alt="Pueblo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen1.png'; this.onerror=null;">
+            <img src="/imagenes/Screen2.png" alt="Cabaña" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen2.png'; this.onerror=null;">
+            <img src="/imagenes/Screen3.png" alt="Cementerio" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen3.png'; this.onerror=null;">
+            <img src="/imagenes/Screen4.png" alt="Pueblo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen4.png'; this.onerror=null;">
+            <img src="/imagenes/Screen5.png" alt="Pueblo2" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen5.png'; this.onerror=null;">
+            <img src="/imagenes/Screen6.png" alt="Grifo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen6.png'; this.onerror=null;">
+            <img src="/imagenes/Screen7.png" alt="Cinematica" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen7.png'; this.onerror=null;">
+            <img src="/imagenes/Screen8.png" alt="Pueblo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen8.png'; this.onerror=null;">
+            <img src="/imagenes/Screen9.png" alt="Pueblo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen9.png'; this.onerror=null;">
+            <img src="/imagenes/Screen10.png" alt="Pueblo" onclick="abrirLightbox(this)" onerror="this.src='imagenes/Screen10.png'; this.onerror=null;">
+        </div>
 
-    <main>
-      <h1>Galería de imágenes</h1>
-
-      <div class="galeria">
-        <img src="imagenes/Screen1.png" alt="Pueblo" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen2.png" alt="Cabaña" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen3.png" alt="Cementerio" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen4.png" alt="Pueblo" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen5.png" alt="Pueblo2" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen6.png" alt="Grifo" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen7.png" alt="Cinematica" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen8.png" alt="Pueblo" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen9.png" alt="Pueblo" onclick="abrirLightbox(this)">
-        <img src="imagenes/Screen10.png" alt="Pueblo" onclick="abrirLightbox(this)">
-      </div>
-
-  
-      <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
-        <span class="cerrar">✖</span>
-        <img id="lightbox-img" src="" alt="Imagen ampliada">
-      </div>
+        <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+            <span class="cerrar">✖</span>
+            <img id="lightbox-img" src="" alt="Imagen ampliada">
+        </div>
     </main>
-  </div>
 
-  <footer class="pie"> 
-    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p> 
-  </footer>
+    <footer class="pie">
+      <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p>
+    </footer>
+</div>
 
-  <script>
+<script>
     function abrirLightbox(img) {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       lightboxImg.src = img.src;
       lightbox.style.display = 'flex';
+      
+      requestAnimationFrame(() => {
+          lightbox.style.opacity = '1';
+      });
     }
 
     function cerrarLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.opacity = '0';
+      
+      setTimeout(() => {
+        lightbox.style.display = 'none';
+      }, 300); 
     }
-  </script>
-  <div class="kofi-flotante">
-  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-  <script type='text/javascript'>
-    kofiwidget2.init('Apóyame en Ko-fi', '#ff1a00', 'X8X13HI4V');
-    kofiwidget2.draw();
-  </script>
+</script>
+
 </body>
 </html>
