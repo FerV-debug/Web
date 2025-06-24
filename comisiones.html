@@ -4,36 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comisiones - Children of Anima</title>
+  <!-- Enlazar a tu archivo de estilos.css -->
   <link rel="stylesheet" href="estilos.css">
+  <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Estilos específicos que usan Tailwind o adaptaciones de componentes */
+    .enter-button {
+      /* Estos estilos de botón pueden ser overrides o adiciones a tu CSS existente */
+      display: inline-block;
+      background-color: #48bb78; /* Un verde vibrante */
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .enter-button:hover {
+      background-color: #38a169; /* Un verde más oscuro al pasar el ratón */
+      transform: translateY(-2px);
+    }
+
+    /* Caja de mensajes para notificaciones */
+    .message-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #38a169; /* Verde para éxito */
+        color: white;
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        font-weight: bold;
+    }
+    .message-box.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    .message-box.error {
+        background-color: #e53e3e; /* Rojo para error */
+    }
+    /* Asegurar que el select-custom también se vea bien con los estilos existentes */
+    .select-custom {
+      /* Asegura que estos estilos se apliquen correctamente si el CSS externo no los cubre */
+      padding: 0.5rem;
+      font-size: 1rem;
+      background-color: var(--bg-dark-blue); /* Usar variable CSS si está disponible */
+      color: var(--text-light); /* Usar variable CSS si está disponible */
+      border: 2px solid var(--border-purple); /* Usar variable CSS si está disponible */
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
 <div class="site-container">
     <header class="site-header">
-  <nav class="menu">
-    
-    <a href="index.html" class="logo-link">
-      <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
-    </a>
+      <nav class="menu">
+        
+        <a href="index.html" class="logo-link">
+          <img src="imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
+        </a>
 
-    
-    <div class="menu-title-container">
-        <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
-    </div>
+        
+        <div class="menu-title-container">
+            <img src="imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;">
+        </div>
 
-    
-    <ul>
-      <li><a href="home.html">Inicio</a></li>
-      <li><a href="galeria.html">Galería</a></li>
-      <li><a href="blog.html">Diario</a></li>
-      <li><a href="comisiones.html">Comisiones</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+        
+        <ul>
+          <li><a href="home.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="blog.html">Diario</a></li>
+          <li><a href="comisiones.html">Comisiones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="content">
       <h2 class="section-title">¡Ten tu propio personaje en el juego!</h2>
@@ -44,34 +103,34 @@
         <div class="commission-gallery" id="carousel">
             
             <div class="card">
-              <img src="/imagenes/comision1.gif" alt="Comisión 1" onerror="this.src='imagenes/comision1.gif'; this.onerror=null;">
+              <img src="imagenes/comision1.gif" alt="Comisión 1" onerror="this.src='imagenes/comision1.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision2.gif" alt="Comisión 2" onerror="this.src='imagenes/comision2.gif'; this.onerror=null;">
+              <img src="imagenes/comision2.gif" alt="Comisión 2" onerror="this.src='imagenes/comision2.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision3.gif" alt="Comisión 3" onerror="this.src='imagenes/comision3.gif'; this.onerror=null;">
+              <img src="imagenes/comision3.gif" alt="Comisión 3" onerror="this.src='imagenes/comision3.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision4.gif" alt="Comisión 4" onerror="this.src='imagenes/comision4.gif'; this.onerror=null;">
+              <img src="imagenes/comision4.gif" alt="Comisión 4" onerror="this.src='imagenes/comision4.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision5.gif" alt="Comisión 5" onerror="this.src='imagenes/comision5.gif'; this.onerror=null;">
+              <img src="imagenes/comision5.gif" alt="Comisión 5" onerror="this.src='imagenes/comision5.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision6.gif" alt="Comisión 6" onerror="this.src='imagenes/comision6.gif'; this.onerror=null;">
+              <img src="imagenes/comision6.gif" alt="Comisión 6" onerror="this.src='imagenes/comision6.gif'; this.onerror=null;">
             </div>
             <div class="card">
-              <img src="/imagenes/comision7.gif" alt="Comisión 7" onerror="this.src='imagenes/comision7.gif'; this.onerror=null;">
+              <img src="imagenes/comision7.gif" alt="Comisión 7" onerror="this.src='imagenes/comision7.gif'; this.onerror=null;">
             </div>
              <div class="card">
-              <img src="/imagenes/comision8.gif" alt="Comisión 8" onerror="this.src='imagenes/comision8.gif'; this.onerror=null;">
+              <img src="imagenes/comision8.gif" alt="Comisión 8" onerror="this.src='imagenes/comision8.gif'; this.onerror=null;">
             </div>
              <div class="card">
-              <img src="/imagenes/comision9.gif" alt="Comisión 9" onerror="this.src='imagenes/comision9.gif'; this.onerror=null;">
+              <img src="imagenes/comision9.gif" alt="Comisión 9" onerror="this.src='imagenes/comision9.gif'; this.onerror=null;">
             </div>
              <div class="card">
-              <img src="/imagenes/comision10.gif" alt="Comisión 10" onerror="this.src='imagenes/comision10.gif'; this.onerror=null;">
+              <img src="imagenes/comision10.gif" alt="Comisión 10" onerror="this.src='imagenes/comision10.gif'; this.onerror=null;">
             </div>
         </div>
         <button class="scroll-btn right">›</button>
@@ -90,9 +149,8 @@
          
           <div id="character-container">
             
-            <img id="base-layer" src="/assets/base.png" alt="Base" onerror="this.src='assets/base.png'; this.onerror=null;">
-            <img id="hair-layer" src="/assets/pelo-rojo.png" alt="Pelo" onerror="this.src='assets/pelo-rojo.png'; this.onerror=null;">
-            <img id="clothes-layer" src="/assets/ropa1.png" alt="Ropa" onerror="this.src='assets/ropa1.png'; this.onerror=null;">
+            <img id="hair-layer" src="assets/pelo-rojo.png" alt="Pelo" onerror="this.src='assets/pelo-rojo.png'; this.onerror=null;">
+            <img id="clothes-layer" src="assets/ropa1.png" alt="Ropa" onerror="this.src='assets/ropa1.png'; this.onerror=null;">
           </div>
         
           
@@ -114,9 +172,12 @@
               </select>
             </div>
             
-            <button id="save-btn" class="enter-button" style="font-size: 1rem; padding: 10px 20px;">Guardar Imagen</button>
+            <button id="save-btn" class="enter-button" type="button" style="font-size: 1rem; padding: 10px 20px;">Guardar Imagen</button>
           </div>
       </div>
+
+      <!-- Caja de mensajes para comentarios del usuario -->
+      <div id="messageBox" class="message-box"></div>
 
     </main>
 
@@ -127,12 +188,28 @@
 
 
 <script>
-  
+  // Función para mostrar una caja de mensajes personalizada
+  function showMessage(message, isError = false) {
+    const messageBox = document.getElementById('messageBox');
+    messageBox.textContent = message;
+    messageBox.classList.remove('error');
+    if (isError) {
+      messageBox.classList.add('error');
+    }
+    messageBox.classList.add('show');
+    setTimeout(() => {
+      messageBox.classList.remove('show');
+    }, 3000); // El mensaje desaparece después de 3 segundos
+  }
+
+  // Funcionalidad del carrusel
   const carousel = document.getElementById('carousel');
   if (carousel) {
     const btnLeft = document.querySelector('.scroll-btn.left');
     const btnRight = document.querySelector('.scroll-btn.right');
-    const cardWidth = 250; 
+    // El ancho de la tarjeta es 200px (min-width de .card en estilos.css) + 16px de gap.
+    // Aunque el original tenía 250px, si tu CSS lo reduce, se ajusta aquí.
+    const cardWidth = 216; 
 
     btnLeft.addEventListener('click', () => {
       carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
@@ -143,69 +220,84 @@
     });
   }
 
-  
+  // Funcionalidad del Personalizador de Personajes
   const hairSelector = document.getElementById("hair-selector");
   const clothesSelector = document.getElementById("clothes-selector");
   const saveBtn = document.getElementById('save-btn');
 
   if (hairSelector && clothesSelector && saveBtn) {
+    // Definir la ruta base para los assets del personaje
     const assetPath = 'assets/'; 
-    const hairLayer = document.getElementById("hair-layer");
-    const clothesLayer = document.getElementById("clothes-layer");
-    const baseLayer = document.getElementById("base-layer");
 
+    // Referencias a los elementos <img> que muestran las capas del personaje
+    // Estas son las que se actualizarán para la visualización en la página
+  
+    const hairLayerDisplay = document.getElementById("hair-layer");
+    const clothesLayerDisplay = document.getElementById("clothes-layer");
 
+    // Actualizar las imágenes de visualización cuando cambian los selectores
     hairSelector.addEventListener("change", function(e) {
-      hairLayer.src = assetPath + e.target.value;
+      hairLayerDisplay.src = assetPath + e.target.value;
     });
 
     clothesSelector.addEventListener("change", function(e) {
-      clothesLayer.src = assetPath + e.target.value;
+      clothesLayerDisplay.src = assetPath + e.target.value;
     });
 
-    saveBtn.addEventListener('click', () => {
-        const canvas = document.createElement('canvas');
-        const size = 64; 
-        canvas.width = size;
-        canvas.height = size;
-        const ctx = canvas.getContext('2d');
-        ctx.imageSmoothingEnabled = false; 
+    saveBtn.addEventListener('click', async () => {
+      saveBtn.disabled = true; // Deshabilitar el botón para evitar clics múltiples
+      showMessage("Preparando la imagen para descargar...", false); // Mostrar mensaje de carga
 
+      const canvas = document.createElement('canvas');
+      const size = 128; // El tamaño original de tus assets era 128x128 según tu CSS.
+                        // Ajustar aquí para que coincida con la resolución de tus sprites.
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false; // Mantener el pixel art nítido
+
+      // Definir las rutas completas de las imágenes para el canvas
+      const imageSources = [
+        hairLayerDisplay.src,    // Usa el .src actual del elemento img
+        clothesLayerDisplay.src // Usa el .src actual del elemento img
         
-        const layersToDraw = [baseLayer, clothesLayer, hairLayer];
-        
-        
-        const promises = layersToDraw.map(imgElement => {
-            return new Promise((resolve, reject) => {
-                if (imgElement.complete) {
-                    resolve(imgElement);
-                } else {
-                    const img = new Image();
-                    img.crossOrigin = "Anonymous";
-                    img.onload = () => resolve(img);
-                    img.onerror = reject;
-                    img.src = imgElement.src;
-                }
-            });
+      ];
+
+      try {
+        // Cargar todas las imágenes usando Promises para asegurar que estén listas
+        const loadedImages = await Promise.all(imageSources.map(src => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous'; // Importante para CORS si las imágenes no están en el mismo dominio
+            img.onload = () => resolve(img);
+            img.onerror = () => reject(new Error(`No se pudo cargar la imagen: ${src}`));
+            img.src = src;
+          });
+        }));
+
+        // Limpiar el canvas y dibujar las capas en el orden correcto
+        ctx.clearRect(0, 0, size, size);
+        loadedImages.forEach(img => {
+          ctx.drawImage(img, 0, 0, size, size);
         });
 
-        Promise.all(promises)
-            .then(images => {
-                
-                ctx.clearRect(0, 0, size, size);
-                images.forEach(img => {
-                    ctx.drawImage(img, 0, 0, size, size);
-                });
-                
-                const link = document.createElement('a');
-                link.download = 'mi_personaje.png';
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-            })
-            .catch(error => {
-                console.error("Error al cargar las imágenes para el canvas:", error);
-                alert("Hubo un error al generar la imagen. Asegúrate de que los archivos existen.");
-            });
+        // Crear un elemento de enlace temporal para iniciar la descarga
+        const link = document.createElement('a');
+        link.download = 'mi_personaje.png'; // Nombre de archivo para la descarga
+        link.href = canvas.toDataURL('image/png'); // Obtener los datos del canvas como una URL de imagen PNG
+
+        // Añadir el enlace al cuerpo, simular un clic y luego eliminarlo
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        showMessage("¡Imagen descargada con éxito!", false); // Mensaje de éxito
+      } catch (error) {
+        console.error("Error al guardar la imagen:", error);
+        showMessage(`Error: ${error.message}. Asegúrate de que las imágenes estén disponibles y las rutas sean correctas.`, true); // Mensaje de error
+      } finally {
+        saveBtn.disabled = false; // Volver a habilitar el botón al finalizar
+      }
     });
   }
 </script>

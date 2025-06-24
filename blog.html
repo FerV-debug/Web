@@ -82,11 +82,23 @@
 </div>
 <script>
     function abrirLightbox(img) {
-      document.getElementById('lightbox-img').src = img.src;
-      document.getElementById('lightbox').style.display = 'flex';
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+      
+      requestAnimationFrame(() => {
+          lightbox.style.opacity = '1';
+      });
     }
+
     function cerrarLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.opacity = '0';
+      
+      setTimeout(() => {
+        lightbox.style.display = 'none';
+      }, 300); 
     }
 </script>
 </body>
