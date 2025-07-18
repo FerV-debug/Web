@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Packs de Apoyo - Children of Anima</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Estilos SOLO para los botones de pagar */
+    .btn {
+      display: inline-block;
+      background: #ff4081; /* color rosa vibrante */
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(255, 64, 129, 0.4);
+      white-space: nowrap;
+      user-select: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #e73370;
+      box-shadow: 0 6px 12px rgba(231, 51, 112, 0.6);
+      outline: none;
+      cursor: pointer;
+    }
+    .btn:active {
+      background-color: #b32956;
+      box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="site-container">
+  <header class="site-header">
+    <nav class="menu">
+      <a href="index.html" class="logo-link">
+        <img src="/imagenes/ico2.png" alt="Logo" class="logo-img" onerror="this.src='imagenes/ico2.png'; this.onerror=null;"/>
+      </a>
+      <div class="menu-title-container">
+        <img src="/imagenes/titulo.png" alt="Título del juego" class="menu-title-image" onerror="this.src='imagenes/titulo1.png'; this.onerror=null;"/>
+      </div>
+      <ul>
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="blog.html">Diario</a></li>
+        <li><a href="comisiones.html">Comisiones</a></li>
+        <li><a href="packs.html">Packs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2 class="section-title">Packs de Apoyo</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto; font-size: 1.1em; color: #ddd;">
+      Puedes apoyar el desarrollo de <strong>Children of Anima</strong> y conseguir recompensas exclusivas dentro del juego. Desde aparecer en los créditos hasta tener tu propio personaje creado por mí e incluido en el mundo. ¡Haz historia junto a nosotros!
+    </p>
+
+    <div class="packs-grid">
+
+      <!-- Pack Gratuito -->
+      <div class="card-style">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>🆓 Explorador Curioso – $0</h3>
+            <ul>
+              <li>✔ Acceso a la versión gratuita del juego</li>
+              <li>✔ Actualizaciones futuras sin coste</li>
+              <li>✔ Nombre en los créditos como "Tester" (opcional)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packs de Pago -->
+      <div class="card-style">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>💖 Aliado del Proyecto – $5 USD</h3>
+            <ul>
+              <li>✔ Todo lo anterior</li>
+              <li>✔ Nombre en créditos como "Colaborador Oficial"</li>
+              <li>✔ Acceso anticipado a futuras versiones</li>
+            </ul>
+          </div>
+          <div class="paypal-btn">
+            <a href="https://www.paypal.me/ImVermilion/5" target="_blank" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-style">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>🧙‍♂️ NPC Personalizado – $15 USD</h3>
+            <ul>
+              <li>✔ Todo lo anterior</li>
+              <li>✔ Personaje pixel art personalizado (te lo entrego en GIF)</li>
+              <li>✔ El personaje aparece como NPC secundario en el juego</li>
+              <li>✔ Créditos como "Creador Invitado"</li>
+            </ul>
+          </div>
+          <div class="paypal-btn">
+            <a href="https://www.paypal.me/ImVermilion/15" target="_blank" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-style">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>⚔️ Héroe del Mundo – $35 USD</h3>
+            <ul>
+              <li>✔ Todo lo anterior</li>
+              <li>✔ Tu personaje tendrá rol e interacciones</li>
+              <li>✔ Puedes elegir su ubicación y personalidad</li>
+              <li>✔ Participación en votaciones privadas</li>
+            </ul>
+          </div>
+          <div class="paypal-btn">
+            <a href="https://www.paypal.me/ImVermilion/35" target="_blank" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-style">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>🏰 Forjador de Leyendas – $75 USD</h3>
+            <ul>
+              <li>✔ Todo lo anterior</li>
+              <li>✔ Tu personaje será parte de una subtrama o evento especial</li>
+              <li>✔ Se integrará con el lore del mundo</li>
+              <li>✔ Créditos como "Forjador de Mundo"</li>
+            </ul>
+          </div>
+          <div class="paypal-btn">
+            <a href="https://www.paypal.me/ImVermilion/75" target="_blank" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-style" style="border: 2px solid gold;">
+        <div class="card-flex">
+          <div class="card-content">
+            <h3>🚀 Cofundador del Mundo – $150+ USD</h3>
+            <ul>
+              <li>✔ Todo lo anterior</li>
+              <li>✔ Crearás junto a mí una zona o personaje clave</li>
+              <li>✔ Reunión creativa privada para definir detalles</li>
+              <li>✔ Créditos como "Cofundador / Patrocinador Oficial"</li>
+            </ul>
+            <p style="color: gold;">Tu impacto será permanente en el universo del juego.</p>
+          </div>
+          <div class="paypal-btn">
+            <a href="https://www.paypal.me/ImVermilion/150" target="_blank" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="pie">
+    <p>© 2025 Vermilion Games™ | Todos los derechos reservados</p>
+  </footer>
+</div>
+
+<script src="particles.js"></script>
+</body>
+</html>
