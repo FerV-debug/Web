@@ -235,7 +235,7 @@ article h3 { font-size: 1rem; color: var(--accent-red); font-family: var(--font-
 .kofi-flotante { position: fixed; bottom: 20px; right: 20px; z-index: 999; }
 article { max-width: 900px; margin: 40px auto; }
 article p { white-space: pre-line; padding: 15px 0; line-height: 1.8; color: var(--text-dark); }
-article a { color: var(--border-purple); font-weight: bold; text-decoration: none; transition: color 0.3s; }
+article a { color: #b81c98; font-weight: bold; text-decoration: none; transition: color 0.3s; }
 article a:hover { color: var(--accent-red); text-decoration: underline; }
 .recuadro-contacto { max-width: 500px; margin: 40px auto; }
 .recuadro-contacto p { display: flex; align-items: center; gap: 15px; margin: 15px 0; font-weight: bold; color: var(--text-dark); font-family: var(--font-title); }
